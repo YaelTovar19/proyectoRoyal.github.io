@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Detalles Articulo</title> 
+</head>
+<script src="https://www.paypal.com/sdk/js?client-id=AVe6UhwhOh1pJsjkJXD11w7p4JdLenXhTrxKEoM0iBkfhrdvRVQ_rKCgsNjUj2ak2ArGD9NysTUPbf5E"></script>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text"> Soporte al cliente </span>
+                        <span class="text"> 4495147053 </span>
+                    </div>
+
+                </div> 
+                <div class="container-logo">
+                    <img src="imagenes/logo.png" alt="Royal Gemstones" class="logo" />
+                    <h1 class="logo"><a href="/"> Joyeria y Bisuteria</a></h1>
+                </div>
+                <div class="container_user">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="content-shopping-cart">
+                        <span class="text">Carrito </span>
+                        <span class="number">(0)</span>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="Registro.html">Registro</a></li>
+                    <li><a href="Ordenes.html">Historial de Ordenes</a></li>
+                </ul>
+               
+            </nav>
+        </div>
+    </header>
+
+    <div class="card">
+        <div class="imgBox">
+            <img src="imagenes/mido.jpeg" alt="Mido">
+        </div>
+        <div class="details">
+            <div class="title">
+                <h3>Reloj Mido <br>
+                    <small>Para caballero modelo Commander</small>
+                </h3>
+            </div>
+            
+            <div class="description">
+                <h4>Descripción</h4>
+                <p>
+                    <b>Broche:</b> Broche plegable <br> 
+                    <b>Color correa:</b> Acero <br>
+                    <b>Cristal:</b> Mineral (Rayado)<br>
+                    <b>Diámetro de caja:</b> 4 cm<br>
+                    <b>Esfera:</b> Negro<br>
+                    <b>Estado de conservación:</b> Bueno; Los artículos presentan leves marcas de uso.<br>
+                </p>
+            </div>
+            <div class="buy">
+                <div class="price">
+                    <sup>$</sup>
+                    <span>13,050</span>
+                </div>
+            <div class="btn">
+                    <a href="#">Pagar con</a>
+                    <div id="paypal-button-container"></div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '13050.00'
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Pago completado. ¡Gracias por tu compra!');
+                        // Puedes agregar aquí lógica adicional después de completar el pago
+                    });
+                }
+            }).render('#paypal-button-container');
+        </script>
+
+    </div>
+    <div class="product-details"> 
+            <div class="reviews">
+                <h4>Reseñas</h4>
+                <div class="user-reviews">
+                    <!-- Aquí se mostrarán las reseñas ingresadas por los usuarios -->
+                </div>
+                <form id="reviewForm">
+                    <textarea id="userReview" placeholder="Escribe tu reseña aquí"></textarea>
+                    <div class="rating">
+                        <input type="radio" id="estrella5" name="rating" value="5"><label for="estrella5" title="5 estrellas"></label>
+                        <input type="radio" id="estrella4" name="rating" value="4"><label for="estrella4" title="4 estrellas"></label>
+                        <input type="radio" id="estrella3" name="rating" value="3"><label for="estrella3" title="3 estrellas"></label>
+                        <input type="radio" id="estrella2" name="rating" value="2"><label for="estrella2" title="2 estrellas"></label>
+                        <input type="radio" id="estrella1" name="rating" value="1"><label for="estrella1" title="1 estrella"></label>
+                    </div>
+                    <button type="submit" class="button-review">Enviar reseña</button>
+                </form>
+            </div>
+        </div>
+
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Informacion de Contacto </p>
+                    <ul>
+                        <li>Direccion: Av.Adolfo Lopez Mateos Ote. 1801,
+                            Bona Gens, 20256, Aguascalientes, Mexico </li>
+                        <li>Telefono: 449-514-7053</li>
+                        <li>Email: royalgemstone@hotmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href= "https://www.facebook.com/pitayajoyeriamx" target="_blank" class="facebook">
+                            <span class="facebook"> <i class="fa-brands fa-facebook"></i></span>
+                        </a>
+                        <span class="instagram"> <i class="fa-brands fa-instagram"></i> </span>
+                        <span class="twitter"> <i class="fa-brands fa-twitter"></i> </span>
+                    </div>
+                </div>
+                <div class="information">
+                    <p class="title-footer"> Informacion</p>
+                    <ul>
+                        <li><a href="#"> Acerca de nosotros</a></li>
+                        <li><a href="#"> Politica de privacidad</a></li>
+                        <li><a href="#"> Terminos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="my-account">
+                    <p class="title-footer"> Mi cuenta</p>
+                    <ul>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Historial de ordenes</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <p class="title-footer"> Boletin Informativo</p>
+                    <div class="content">
+                        <p>
+                            Suscribete a nuestros boletines ahora y mantente al
+                            dia con nuevas colecciones y ofertas exclusivas!
+                        </p>
+                        <input type="email" placeholder="Ingresa el correo aqui...">
+                        <button>Suscribete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    Desarrollado por Royal Gemstone &copy; 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script 
+    src="https://kit.fontawesome.com/b6fba9d152.js" 
+    crossorigin="anonymous">
+  </script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const reviewForm = document.getElementById("reviewForm");
+        const userReviewInput = document.getElementById("userReview");
+        const userReviewsContainer = document.querySelector(".user-reviews");
+
+        reviewForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const userReviewText = userReviewInput.value.trim();
+            const userRating = document.querySelector('input[name="rating"]:checked');
+
+            if (userReviewText !== "" && userRating) {
+                const reviewWithRating = `${userReviewText} (${userRating.value} estrellas)`;
+                displayUserReview(reviewWithRating);
+                userReviewInput.value = "";
+                userRating.checked = false;
+            } else {
+                alert("Por favor, ingresa una reseña y selecciona una calificación.");
+            }
+        });
+
+        function displayUserReview(review) {
+            const reviewElement = document.createElement("div");
+            reviewElement.classList.add("user-review");
+            reviewElement.textContent = review;
+            userReviewsContainer.appendChild(reviewElement);
+        }
+    });
+</script>
+</body>
+</html>

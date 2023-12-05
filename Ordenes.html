@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NutriGym Shop Suplementos nutricionales de alta calidad</title>
+        <style>
+    :root{
+        --primary-color: #A5C9CA; 
+        --background-color: #f9f5f0; /* color de las paginas */
+        --dark-color: #0C356A; /* color de las letras */
+        
+    
+    }
+    
+    html{
+        font-size: 62.5%;
+        font-family: 'Popins', sans-serif;
+    }
+    
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+     /* Utilidades*/
+     /*Centrar el contenido*/
+    .container{
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+    
+    .heading-1{
+        text-align: center;
+        font-weight: 500;
+        font-size: 3rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    /*Header*/
+    .container-hero{
+      background-color: var(--background-color);
+    }
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    
+    .customer-support {
+       display: flex;
+       align-items: center;
+       gap: 2rem; 
+    }
+    
+    .customer-support i{
+        font-size: 3.3rem;
+    }
+    
+    .content-customer-support{
+       display: flex;
+       flex-direction: column;
+    }
+    
+    .container-logo{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    .container-logo i{
+        font-size: 3rem;
+    }
+    
+    .container-logo h1 a{
+        text-decoration: none;
+        color: black;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+    
+    .container-user{
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+    }
+    
+    .container-user .fa-user{
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-right: 2.5rem;
+    border-right: 1px solid #e2e2e2;
+    }
+    
+    .container-user .fa-basket-shopping{
+        font-size: 3rem;
+        color: var(--primary-color);
+        padding-left: 1rem; 
+    }
+    
+    
+    .content-shopping-car{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* NAVBAR */
+    
+    .container-navbar{
+        background-color: var(--primary-color);
+    }
+    
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    /* Funcion que oculta las barras que aparecen en la app del telefono*/
+    .navbar .fa-bars{
+        display: none;
+    }
+    
+    .menu{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .menu li{
+       list-style: none; 
+    }
+    
+    .menu a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: var(--dark-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        position: relative;
+    }
+    
+    .menu a::after{
+        content:'';
+        width: 1.5rem;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    
+    .menu a:hover::after{
+        opacity: 1;
+    }
+    
+    .menu a:hover{
+        color: #fff;
+    }
+    
+    /* barra busqueda */
+    .search-form{
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 2px solid #fff;
+        border-radius: 2rem;
+        background-color: #fff;
+        height: 4.4rem;
+        overflow:hidden;
+    }
+    
+    .search-form input{
+        outline: none;
+        font-family: inherit;
+        border: none;
+        width: 25rem;
+        font-size: 1.4rem;
+        padding: 0 2rem;
+        color: #777;
+        cursor: pointer;
+    }
+    
+    .search-form input::-webkit-search-cancel-button{
+        appearance: none;
+    }
+    
+    .search-form .btn-search{
+        border: none;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 1rem;
+    }
+    
+    .btn-search{
+        font-size: 2rem;
+        color: #fff;
+    }
+    
+    /* BANNER */
+    .banner{
+        background-image:url('imagenes/banner.jpg');
+        height: 80rem;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .content-banner{
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: 25rem 0;
+    }
+    
+    .content-banner p{
+      color: #DDF2FD;
+      font-size: 5rem;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      text-shadow: 2px 2px 4px #333;
+    }
+    
+    .content-banner a{
+        margin-top: 2rem;
+        text-decoration: none;
+        color: #164863;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2rem;
+        background-color: var(--primary-color);
+        display: inline-block;
+        padding: 1rem 3rem;
+        text-transform: uppercase;
+        border-radius: 3rem;
+    
+    }
+    
+    
+    
+    /*Footer*/
+    
+    .footer{
+        background-color: var(--background-color);
+    }
+    
+    .container-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 3rem;
+    }
+    
+    .menu-footer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr) 30rem;
+        gap: 3rem;
+        justify-content: center;
+    }
+    
+    .title-footer{
+        font-weight: 600;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+    
+    .contact-info,
+    .information,
+    .my-account,
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .contact-info ul,
+    .information ul,
+    .my-account ul{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;  
+    }
+    
+    .contact-info ul li,
+    .information ul li,
+    .my-account ul li{
+       list-style: none;
+       color: #164863;
+       font-size: 1.4rem;
+       font-weight: 600;
+    }
+    
+    .information ul li a,
+    .my-account ul li a{
+        text-decoration: none;
+        color: #164863;
+        font-weight: 300;
+    }
+    
+    .information ul li a:hover,
+    .my-account ul li a:hover{
+        color: var(--dark-color);
+    }
+    
+    .social-icons{
+        display: flex;
+        gap: 1.5rem;
+    }
+    
+    .social-icons span{
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social-icons span i{
+        color: #164863;
+        font-size: 1.2rem;
+    }
+    
+    .facebook{
+        background-color: #3b5998;
+    }
+    
+    .instagram{
+        background: linear-gradient(
+            #405de6,
+            #833ab4,
+            #c13584,
+            #e1386c,
+            #fd1d1d,
+            #f56040,
+            #fcaf45
+        );
+    }
+    
+    .twitter{
+        background-color: #00acee;
+    }
+    
+    .content p{
+        font-size: 1.4rem;
+        color: #164863;
+        font-weight: 300;
+    }
+    
+    .content input{
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #9BBEC8;
+        cursor: pointer;
+        padding: 0.5rem 0 1.2rem;
+        color: var(--dark-color);
+        display: block;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        width: 100%;
+        font-family: inherit;
+    }
+    
+    .content button{
+        border: none;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+        font-size: 1.4rem;
+        font-family: inherit;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    
+    .content button:hover{
+        background-color: var(--background-color);
+        color: #164863;
+    }
+    
+    .copyright{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+        border-top: 1px solid #164863;
+    }
+    
+    .copyright  p{
+       font-weight: 400;
+       font-size: 1.6rem; 
+    }
+
+     /*Body*/
+
+     body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 16px; /* Ajusta el tamaño de la fuente principal */
+        }
+
+        h1 {
+            font-size: 24px; /* Ajusta el tamaño de la fuente para el encabezado */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .order-image {
+            max-width: 50px;
+            max-height: 50px;
+        }
+   
+        </style>
+    
+       
+    
+    
+    </head>
+   
+   
+    
+    <body>
+        
+        <header>
+            <div class="container-hero">
+                <div class="container hero">
+                    <div class="customer-support">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="content-customer-support">
+                            <span class="text"> Soporte al cliente </span>
+                            <span class="text"> 4495147053 </span>
+                        </div>
+    
+                    </div>
+                    <div class="container-logo">
+                        <img src="imagenes/logo.png" alt="Royal Gemstones" class="logo" />
+                    <h1 class="logo"><a href="/"> Joyeria y Bisuteria</a></h1>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="container-navbar">
+                <nav class="navbar container">
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="Registro.html">Registro</a></li>
+                    </ul>
+                   
+                </nav>
+            </div>
+        </header>
+<body>
+    <br>
+   
+
+    <h1>Órdenes de Compra</h1>
+
+    <table>
+        <tr>
+            <th>Número de Orden</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Imagen de referencia</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>01/12/2023</td>
+            <td>En Proceso</td>
+            <td><img src="imagenes/dije cruz.jpeg" alt="Imagen de la Orden 1" class="order-image"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>02/12/2023</td>
+            <td>Completada</td>
+            <td><img src="imagenes/collar año.jpeg" alt="Imagen de la Orden 2" class="order-image"></td>
+        </tr>
+        <!-- Agrega más filas según sea necesario -->
+    </table>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Informacion de Contacto </p>
+                    <ul>
+                        <li>Direccion: Av.Adolfo Lopez Mateos Ote. 1801,
+                            Bona Gens, 20256, Aguascalientes, Mexico </li>
+                        <li>Telefono: 123-456-7890</li>
+                        <li>Email: royalgemstone@hotmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61553337389807&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true"
+                            target="_blank" class="facebook">
+                            <span class="facebook"> <i class="fa-brands fa-facebook"></i></span>
+                        </a>
+                        <span class="instagram"> <i class="fa-brands fa-instagram"></i> </span>
+                        <span class="twitter"> <i class="fa-brands fa-twitter"></i> </span>
+                    </div>
+                </div>
+                <div class="information">
+                    <p class="title-footer"> Informacion</p>
+                    <ul>
+                        <li><a href="#"> Acerca de nosotros</a></li>
+                        <li><a href="#"> Politica de privacidad</a></li>
+                        <li><a href="#"> Terminos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="my-account">
+                    <p class="title-footer"> Mi cuenta</p>
+                    <ul>
+                        <li><a href="Cuenta.html">Mi cuenta</a></li>
+
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <p class="title-footer"> Boletin Informativo</p>
+                    <div class="content">
+                        <p>
+                            Suscribete a nuestros boletines ahora y mantente al
+                            dia con nuevas colecciones y ofertas exclusivas!
+                        </p>
+                        <input type="email" placeholder="Ingresa el correo aqui...">
+                        <button>Suscribete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    Desarrollado por Royal Gemstone &copy; 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+     <script src="https://kit.fontawesome.com/b6fba9d152.js" crossorigin="anonymous"> 
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+</body>
+</html>
